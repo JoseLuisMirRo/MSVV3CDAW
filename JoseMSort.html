@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ordernar lista de números con el método sort()</title>
+  </head>
+
+  <body>
+    <h1>Ordenar lista de números</h1>
+    <label for="ingresoNumeros">Ingrese números separados por comas:</label>
+    <br><br>
+    <input type="text" id="ingresoNumeros" placeholder="Ejemplo: 3,6,4,1,10">
+    <br><br>
+    <button onclick="ordenarNumeros()">Ordenar</button>
+
+  </body>
+  <script>
+    function ordenarNumeros(){
+      let input = document.getElementById('ingresoNumeros').value;
+      let arregloNumeros = input.split(',').map(Number); //Aquí utilicé estos métodos para convertir la cadena de texto en array, pero no estamos enfocados en estos
+      //Método para ordenar el array
+      arregloNumeros.sort((a,b)=>(a-b)); //Parametros de comparacion. La funcion sort ordena según su valor UNICODE, por lo que debemos agregar parámetros de evaluación para los números
+      /*Explicacion de la función: 
+      Los elementos del primer paréntesis (a y b) representan los elementos del array que sort está comparando en ese momento. 
+
+      La función realiza una resta entre 'a' y 'b'. Dependiendo del resultado de esta resta, sort decide el orden de a y b. 
+      - Si el resultado es negativo indica que 'a' debe ir antes de 'b'
+      - Si el resultado es positivo indica que 'a' debe ir despues de 'b'
+      - Si el resultado es cero indica que 'a' y 'b' son iguales en terminos de orden. 
+
+      La flecha(=>) separa los parámetros de la función de su cuerpo. 
+      
+      */
+      alert(`Numeros Ordenados: ${arregloNumeros}`);
+
+    }
+  </script>
+</html>
