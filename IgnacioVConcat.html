@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo Concat</title>
+    </head>
+    <body>
+        <h1>Ejemplo concatenando varios datos</h1>
+        <p>
+            <h4>Sintaxis: array.concat(valor1, valor2, ..., valorN)</h4>
+            El método concat se usa para unir dos o más arrays en un nuevo array. <br>
+            Esto significa que el método no modifica los arrays originales, <br>
+            sino que crea un nuevo array que contiene todos los elementos de los arrays unidos. <br>
+        </p>
+    </body>
+    <script>
+    let arr1 = [1, 2, 3, 4];
+    let arr2 = ["a", "b"];
+    let arr3 = [true, false];
+    let arr4 = [{ name: "Ignacio" }, { name: "Luis" }];
+    let arr5 = [4.5, 7.6];
+
+    // Uso de la función para concatenar los arrays.
+    let arregloCombinado = arr1.concat(arr2, arr3, arr4, arr5);
+
+    // Función para imprimir el arreglo concatenado
+    console.log(arregloCombinado);
+    </script>
+</html>
